@@ -94,13 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // email vali
         function emailVali(){
             let regex =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            
                 if(regex.test(userEmail.value)){
                     emailAlert.classList.replace("d-block","d-none")
                     return true
                 }
+                else if(userEmail.value == ""){
+                    emailAlert.classList.replace("d-block","d-none")
+                }
                 else{
                     emailAlert.classList.replace("d-none","d-block")
+
                 }
                 
             }
